@@ -1,10 +1,11 @@
 package by.it.apiok.lesson04;
 
+import java.util.Scanner;
+
 /*
 Таблица умножения
 Вывести на экран таблицу умножения size х size используя цикл while.
-size прочитать c клавиатуры. Числа разделить пробелом.
-
+        size прочитать c клавиатуры. Числа разделить пробелом.
 Пример вывода на экран для числа 10:
 1 2 3 4 5 6 7 8 9 10
 2 4 6 8 10 12 14 16 18 20
@@ -17,12 +18,25 @@ size прочитать c клавиатуры. Числа разделить п
 9 18 27 36 45 54 63 72 81 90
 10 20 30 40 50 60 70 80 90 100
 
-
 Требования:
-1. Программа должна считывать переменную int size c клавиатуры.
+            1. Программа должна считывать переменную int size c клавиатуры.
 2. Программа должна выводить текст на экран.
 3. Программа должна выводить таблицу умножения size х size.
  */
 public class TaskB2 {
-
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+        int i = 1; // column number
+        int j = 1; // string number
+        while (i<size){
+            if (j<size){
+                System.out.print(j*size + " ");
+            }
+            System.out.print(i*size + " ");
+            i++;
+            j++;
+        }
+        System.out.println();
+    }
 }
