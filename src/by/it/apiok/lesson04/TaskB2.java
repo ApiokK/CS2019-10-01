@@ -20,7 +20,7 @@ import java.util.Scanner;
 
 Требования:
             1. Программа должна считывать переменную int size c клавиатуры.
-2. Программа должна выводить текст на экран.
+            2. Программа должна выводить текст на экран.
 3. Программа должна выводить таблицу умножения size х size.
  */
 public class TaskB2 {
@@ -28,14 +28,16 @@ public class TaskB2 {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         int i = 1; // column number
-        int j = 1; // string number
-        while (i<size){
-            if (j<size){
-                System.out.print(j*size + " ");
+
+        while (i <= size) {
+            int j = 1; // string number
+
+            while (j <= size) {
+                System.out.print(j * i + " ");
+                j++;
             }
-            System.out.print(i*size + " ");
+            System.out.println();
             i++;
-            j++;
         }
         System.out.println();
     }
