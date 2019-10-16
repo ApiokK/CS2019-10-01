@@ -24,18 +24,21 @@ package by.it.apiok.lesson05;
 */
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class TaskA1 {
     public static void main(String[] args) {
         int[] arr = new int[10];
-        for (int i = 0; i <10; i++) {
-            Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        for (int i = 9; i >=0 ; i--) {
             arr[i] = sc.nextInt();
         }
-        for (int i = 9; i >-1; i--) {
-            System.out.println(arr[i]);
+        for (int t : arr ) {
+            System.out.println(t);
         }
+        System.out.println(Arrays.toString(arr));
+
     }
 
 }
